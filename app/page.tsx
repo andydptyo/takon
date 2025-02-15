@@ -51,7 +51,7 @@ export default function Home() {
       <main className="flex-1 p-4 w-full max-w-md">
         <ChatBox messages={messages} loading={loading} />
       </main>
-      <footer className="p-4 w-full max-w-md">
+      <footer className="p-4 w-full max-w-md sticky bottom-0 bg-white">
         <ChatInput onSendMessage={handleSendMessage} />
       </footer>
     </div>
