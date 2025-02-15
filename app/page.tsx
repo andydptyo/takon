@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import ChatBox from '../components/ChatBox';
-import ChatInput from '../components/ChatInput';
+import ChatBox from '@/components/ChatBox';
+import ChatInput from '@/components/ChatInput';
 
 export default function Home() {
   const [messages, setMessages] = useState<{ sender: string; text: string; }[]>([]);
