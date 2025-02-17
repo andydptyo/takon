@@ -20,7 +20,7 @@ const ChatBox = ({ messages, loading }) => {
   }, [messages, loading]);
 
   return (
-    <div className="chat-box h-[600px] overflow-y-auto p-4 bg-gray-50">
+    <div className="chat-box h-full overflow-y-auto p-4 bg-gray-50 flex flex-col">
       {messages.map((message, index) => {
         const isUser = message.sender === 'user';
         const showTimestamp = index === 0 || messages[index - 1]?.sender !== message.sender;
