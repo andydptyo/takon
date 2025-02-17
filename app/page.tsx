@@ -48,7 +48,7 @@ export default function Home() {
         <h1 className="text-xl font-bold">Takon</h1>
         <p className="text-sm">Model: google/gemini-2.0-flash-exp:free</p>
       </header>
-      <main className="flex-1 p-4 w-full max-w-md">
+      <main className="flex-1 p-4 w-full max-w-md h-[500px]">
         <ChatBox messages={messages} loading={loading} />
       </main>
       <footer className="p-4 w-full max-w-md sticky bottom-0 bg-white">

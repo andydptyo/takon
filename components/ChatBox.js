@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const LoadingDots = () => (
   <div className="flex space-x-1 items-center justify-center mr-auto max-w-[80%] bg-white text-gray-800 rounded-2xl rounded-bl-none shadow-sm border border-gray-200 px-4 py-2 my-1">
@@ -42,7 +44,7 @@ const ChatBox = ({ messages, loading }) => {
                   : 'bg-white text-gray-800 mr-auto rounded-2xl rounded-bl-none border border-gray-200'
               } shadow-sm px-4 py-2 my-1 hover:shadow-md transition-shadow duration-200`}
             >
-              {message.text}
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.text}</ReactMarkdown>
             </div>
           </div>
         );
